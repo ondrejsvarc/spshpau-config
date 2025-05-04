@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        # --- User Service Paths ---
+        - id: users_route
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/v1/users/**
+
+        - id: genres_route
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/v1/genres/**
+
+        - id: skills_route
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/v1/skills/**
+
+        - id: interactions_route
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/v1/interactions/**
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    register-with-eureka: false
