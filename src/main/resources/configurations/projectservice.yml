@@ -47,6 +47,6 @@ aws:
     bucket-name: spshpau-bucket
     presigned-url-duration-minutes: 15
 
-    credentials:
-      access-key-id: # Insert here
-      secret-access-key: # Insert here
+  credentials:
+    access-key-id:
+    secret-access-key:
