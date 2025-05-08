@@ -28,6 +28,18 @@ spring:
           predicates:
             - Path=/api/v1/interactions/**
 
+        # --- Chat Service Paths ---
+        - id: messages_route
+          uri: http://localhost:8091
+          predicates:
+            - Path=/messages/**
+
+        # --- Project Service Paths ---
+        - id: projects_route
+          uri: http://localhost:8092
+          predicates:
+            - Path=/api/v1/projects/**
+
 server:
   port: 8081
 
