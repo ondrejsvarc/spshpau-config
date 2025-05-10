@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.spshpau</groupId>
 	<artifactId>config</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.1-ALPHA</version>
 	<name>config</name>
 	<description>Configuration Server for spshpau project</description>
 	<url/>
