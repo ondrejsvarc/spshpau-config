@@ -32,7 +32,12 @@ spring:
         - id: messages_route
           uri: http://localhost:8091
           predicates:
-            - Path=/messages/**
+            - Path=/api/v1/messages/**
+
+        - id: chats_route
+          uri: http://localhost:8091
+          predicates:
+            - Path=/api/v1/chats/**
 
         # --- Project Service Paths ---
         - id: projects_route

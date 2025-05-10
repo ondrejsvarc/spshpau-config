@@ -8,7 +8,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update # validate for production, create for early development, update for development
+      ddl-auto: validate # validate for production, create for early development, update for development
     show-sql: true
     properties:
       hibernate:
@@ -48,5 +48,5 @@ aws:
     presigned-url-duration-minutes: 15
 
   credentials:
-    access-key-id:
-    secret-access-key:
+    access-key-id: # TBA
+    secret-access-key: # TBA
