@@ -13,7 +13,7 @@ spring:
     mongodb:
       username: spshpau
       password: admin
-      host: 192.168.1.112
+      host: mongodb
       port: 27017
       database: chat
       authentication-database: admin
@@ -26,7 +26,7 @@ eureka:
     hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://discovery-server:8761/eureka
 
 jwt:
   auth:
@@ -36,4 +36,4 @@ jwt:
 
 application:
   cofig:
-    userclienturl: http://localhost:8090/api/v1/interactions
+    userclienturl: http://userservice:8090/api/v1/interactions

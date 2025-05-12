@@ -2,7 +2,7 @@ spring:
   application:
     name: projectservice
   datasource:
-    url: jdbc:postgresql://192.168.1.112:5432/spshpau-project-db
+    url: jdbc:postgresql://postgresqldb:5432/spshpau-project-db
     username: spshpau
     password: admin
     driver-class-name: org.postgresql.Driver
@@ -35,11 +35,11 @@ eureka:
     hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://discovery-server:8761/eureka
 
 application:
   cofig:
-    userclienturl: http://localhost:8090/api/v1
+    userclienturl: http://userservice:8090/api/v1
 
 aws:
   region: eu-north-1
