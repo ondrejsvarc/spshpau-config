@@ -16,48 +16,48 @@ spring:
             maxAge: 3600
       discovery:
         locator:
-          enabled: true
+          enabled: false
       routes:
         # --- User Service Paths ---
         - id: users_route
-          uri: lb://userservice
+          uri: http://userservice:8090
           predicates:
             - Path=/api/v1/users/**
 
         - id: genres_route
-          uri: lb://userservice
+          uri: http://userservice:8090
           predicates:
             - Path=/api/v1/genres/**
 
         - id: skills_route
-          uri: lb://userservice
+          uri: http://userservice:8090
           predicates:
             - Path=/api/v1/skills/**
 
         - id: interactions_route
-          uri: lb://userservice
+          uri: http://userservice:8090
           predicates:
             - Path=/api/v1/interactions/**
 
         # --- Chat Service Paths ---
         - id: messages_route
-          uri: lb://chatservice
+          uri: http://chatservice:8091
           predicates:
             - Path=/api/v1/messages/**
 
         - id: chats_route
-          uri: lb://chatservice
+          uri: http://chatservice:8091
           predicates:
             - Path=/api/v1/chats/**
 
         - id: chatservice_websocket_route
-          uri: lb://chatservice
+          uri: http://chatservice:8091
           predicates:
             - Path=/ws/**
 
         # --- Project Service Paths ---
         - id: projects_route
-          uri: lb://projectservice
+          uri: http://projectservice:8092
           predicates:
             - Path=/api/v1/projects/**
 
@@ -65,10 +65,5 @@ server:
   port: 8081
 
 eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://discovery-server:8761/eureka
   client:
     register-with-eureka: false
